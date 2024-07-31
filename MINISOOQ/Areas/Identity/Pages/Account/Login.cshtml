@@ -1,0 +1,134 @@
+﻿@page
+@model LoginModel
+
+@{
+    ViewData["Title"] = "Log in";
+    
+}
+<br /><br />
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <!--=============== FLATICON ===============-->
+    <link rel="stylesheet"
+          href="https://cdn-uicons.flaticon.com/2.0.0/uicons-regular-straight/css/uicons-regular-straight.css" />
+
+    <!--=============== SWIPER CSS ===============-->
+    <link rel="stylesheet"
+          href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+
+    <!--=============== CSS ===============-->
+    <link rel="stylesheet" href="./assets/css/styles.css" />
+
+    <title>MiniSooq</title>
+</head>
+<body>
+    <!--=============== HEADER ===============-->
+   
+
+    <!--=============== MAIN ===============-->
+    <main class="main">
+        <!--=============== BREADCRUMB ===============-->
+        <section class="breadcrumb">
+            <ul class="breadcrumb__list flex container">
+                <li><a href="index.html" class="breadcrumb__link">Home</a></li>
+                <li><span class="breadcrumb__link">></span></li>
+                <li><span class="breadcrumb__link">Login / Register</span></li>
+            </ul>
+        </section>
+
+        <!--=============== LOGIN-REGISTER ===============-->
+        <section class="login-register section--lg">
+            <div class="login-register__container container grid">
+                <div class="login">
+                    
+@*                     <form class="form grid">
+                        <input type="email"
+                               placeholder="Your Email"
+                               class="form__input" />
+                        <input type="password"
+                               placeholder="Your Password"
+                               class="form__input" />
+                        <div class="form__btn">
+                            <button class="btn">Login</button>
+                        </div>
+                    </form> *@
+                    <form class="form grid" id="account" method="post">
+                        <h3 class="section__title">Login</h3>                        
+                        <hr />
+                        <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+                        <div>
+                            <input asp-for="Input.Email" placeholder="Your Email"
+                                   class="form__input" autocomplete="username" aria-required="true" />
+                            <span asp-validation-for="Input.Email" class="text-danger"></span>
+                        </div>
+                        <div class="form-floating">
+                            <input asp-for="Input.Password" placeholder="Your Password"
+                                   class="form__input" autocomplete="current-password" aria-required="true" />
+                            <span asp-validation-for="Input.Password" class="text-danger"></span>
+                        </div>
+                        <div>
+                            <div class="checkbox">
+                                <label asp-for="Input.RememberMe" class="form-label">
+                                    <input class="form-check-input" asp-for="Input.RememberMe" />
+                                    @Html.DisplayNameFor(m => m.Input.RememberMe)
+                                </label>
+                            </div>
+                        </div>
+                        <div class ="form__btn">
+                            <button class="btn" id="login-submit" type="submit">Log in</button>
+                        </div>
+                        <div>
+                            <p>
+                                <a id="forgot-password" asp-page="./ForgotPassword">Forgot your password?</a>
+                            </p>
+                            <p>
+                                <a asp-page="./Register" asp-route-returnUrl="@Model.ReturnUrl">Register as a new user</a>
+                            </p>
+                            <p>
+                                <a id="resend-confirmation" asp-page="./ResendEmailConfirmation">Resend email confirmation</a>
+                            </p>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </section>
+
+        <!--=============== NEWSLETTER ===============-->
+        <section class="newsletter section">
+            <div class="newsletter__container container grid">
+                <h3 class="newsletter__title flex">
+                    <img src="./assets/img/icon-email.svg"
+                         alt=""
+                         class="newsletter__icon" />
+                    Sign in to Newsletter
+                </h3>
+                <p class="newsletter__description">
+                    ...and receive $25 coupon for first shopping.
+                </p>
+                <form action="" class="newsletter__form">
+                    <input type="text"
+                           placeholder="Enter Your Email"
+                           class="newsletter__input" />
+                    <button type="submit" class="newsletter__btn">Subscribe</button>
+                </form>
+            </div>
+        </section>
+    </main>
+
+
+    <!--=============== SWIPER JS ===============-->
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+
+    <!--=============== MAIN JS ===============-->
+    <script src="assets/js/main.js"></script>
+    @section Scripts {
+        <partial name="_ValidationScriptsPartial" />
+    }
+
+</body>
+</html>
+

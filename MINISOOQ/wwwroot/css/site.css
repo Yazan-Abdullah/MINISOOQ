@@ -1,0 +1,186 @@
+﻿/* Please see documentation at https://docs.microsoft.com/aspnet/core/client-side/bundling-and-minification
+for details on configuring this project to bundle and minify static web assets. */
+
+a.navbar-brand {
+  white-space: normal;
+  text-align: center;
+  word-break: break-all;
+}
+main {
+    width: 100%;
+}
+.container {
+    width: 100%;
+}
+/*.bg-gradient-custom {
+    background: linear-gradient(to right, black, red);
+}*/
+header {
+    background-color:white ;
+}
+
+.bg-gradient-custom {
+    background-color:white ; /* Use !important to ensure it overrides other styles */
+    color: black; /* Set text color if necessary */
+}
+.nav-pills .nav-link.active, .nav-pills .show > .nav-link {
+    color: black;
+    background-color: #1b6ec2;
+    border-color: #1861ac;
+}
+
+html {
+  font-size: 14px;
+}
+@media (min-width: 768px) {
+  html {
+    font-size: 16px;
+  }
+}
+
+.border-top {
+  border-top: 1px solid #e5e5e5;
+}
+.border-bottom {
+  border-bottom: 1px solid #e5e5e5;
+}
+
+.box-shadow {
+  box-shadow: 0 .25rem .75rem rgba(0, 0, 0, .05);
+}
+
+button.accept-policy {
+  font-size: 1rem;
+  line-height: inherit;
+}
+
+html {
+  position: relative;
+  min-height: 100%;
+}
+
+body {
+  margin-bottom: 60px;
+
+}
+.footer {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  white-space: nowrap;
+  line-height: 60px;
+}
+/* Add this to your site.css or custom.css */
+
+.header-wrap {
+    background-color: #fff;
+    border-bottom: 1px solid #e9ecef;
+}
+
+.header-wrap-inner {
+    padding: 10px 0;
+}
+
+.header-column-left, .header-column-right {
+    display: flex;
+    align-items: center;
+}
+
+.sidebar-menu-icon-wrap {
+    margin-right: 20px;
+}
+
+.sidebar-menu-icon span {
+    display: block;
+    width: 25px;
+    height: 2px;
+    background-color: #333;
+    margin: 5px 0;
+}
+
+.header-logo img {
+    max-height: 40px;
+}
+
+.header-wishlist, .header-cart {
+    margin-left: 20px;
+    text-align: center;
+}
+
+    .header-wishlist .icon-wrap, .header-cart .icon-wrap {
+        position: relative;
+    }
+
+        .header-wishlist .icon-wrap .count, .header-cart .icon-wrap .count {
+            position: absolute;
+            top: -10px;
+            right: -10px;
+            background-color: #f00;
+            color: #fff;
+            border-radius: 50%;
+            padding: 2px 5px;
+            font-size: 12px;
+        }
+
+.navigation-wrap {
+    background-color: #f8f9fa;
+    padding: 10px 0;
+}
+
+.navigation-inner {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+/*Four card section*/
+.card-containerRR {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin-top: 20px;
+}
+
+.cardk {
+    position: relative;
+    background-size: cover;
+    background-position: center;
+    border-radius: 8px;
+    margin: 15px;
+    width: 500px;
+    height: 500px; /* Adjust as needed */
+    cursor: pointer;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+    .cardk::after {
+        content: attr(data-title);
+        position: absolute;
+        bottom: 10px;
+        left: 0;
+        right: 0;
+        text-align: center;
+        color: white;
+        font-size: 1.5em;
+        text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
+    }
+
+.card-men {
+    background-image: url('../images/men-02.jpg');
+}
+
+.card-women {
+    background-image: url('../images/instagram-01.jpg');
+}
+
+.card-kids {
+    background-image: url('../images/kid-02.jpg');
+}
+
+.card-babies {
+    background-image: url('../images/baner-right-image-03.jpg');
+}
+
+.cardk:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
+}
