@@ -9,7 +9,7 @@
 
 
 <!--=============== HOME ===============-->
-<section class="home section--lg">
+@* <section class="home section--lg">
     <div class="home__container container grid">
         <div class="home__content">
             <span class="home__subtitle">Hot Promotions</span>
@@ -21,9 +21,9 @@
             </p>
             <a href="shop.html" class="btn">Shop Now</a>
         </div>
-        <img src="assets/img/home-img.png" class="home__img" alt="hats" />
+        <img src="assets/img/deals-1.jpg" class="home__img" alt="hats" />
     </div>
-</section>
+</section> *@
 
 <!--=============== CATEGORIES ===============-->
 <section class="categories container section">
@@ -124,7 +124,7 @@
                                 </a> *@
                                 <form  asp-action="AddToFavorite" method="post">
                                     <input type="hidden" name="productId" value="@product.Id" />
-                                    <button id="favoriteButton" type="submit"  value="Add to Favorites" class="action__btn">
+                                    <button id="favoriteButton" type="submit" aria-label="Add To Favorites" value="Add to Favorites" class="action__btn">
                                         <i class="fi fi-rs-heart"></i>
                                     </button>
                                 </form>
@@ -151,11 +151,15 @@
                                 <span class="new__price">$@product.Price.ToString("0.00")</span>
 @*                                 <span class="old__price">$@product.Price.ToString("0.00")</span>
  *@                            </div>
-                            <a href="#"
+                            <form asp-action="AddToCart" method="post">
+                                <input type="hidden" name="productId" value="@product.Id" />
+                                <button class="action__btn cart__btn" aria-label="Add To Cart" type="submit" value="Add to Cart"><i class="fi fi-rs-shopping-bag-add"></i></button>
+                            </form>
+@*                             <a href="#"
                                class="action__btn cart__btn"
                                aria-label="Add To Cart">
                                 <i class="fi fi-rs-shopping-bag-add"></i>
-                            </a>
+                            </a> *@
                         </div>
                     </div>
                 }            
